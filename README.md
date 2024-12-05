@@ -4,14 +4,26 @@
 ## ER図
 ![ER図](ER.drawio.png)
 
-## 環境構築
-http://localhost/
+## URL
+```
+
+・開発環境：http://localhost/
+・phpMyAdmin:http://localhost:8080/
+
+```
 
 ## 使用技術(実行環境)
-Laravel 8.x
-MySQL
+```
+
+PHP 7.4.9
+Laravel Framework 8.83.8
+MySQL 8.0.26
 Nginx
 Docker/Docker-compose
+
+```
+
+## 環境構築
 ```
 
 リポジトリからダウンロードして下さい
@@ -38,6 +50,4 @@ http://localhostにアクセスして
 "The stream or file could not be opened"というエラーが発生した場合は
 ファイルの権限を変更して対応お願いします
 
-大変申し訳ありませんが完成できておらず、お問い合せフォーム入力画面しか完成しておりません。
-何卒、よろしくお願いいたします。
 ```
