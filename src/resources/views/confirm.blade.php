@@ -106,7 +106,7 @@
     </form>
   </div>
 @endsection
-  </main>
+</main>
 </body>
 
 </html>

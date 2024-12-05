@@ -19,7 +19,7 @@
     </div>
   </header>
 
-  <main>
+　<main>
 @extends('layouts.app')
 
 @section('css')
