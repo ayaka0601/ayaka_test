@@ -14,12 +14,19 @@ class ContactFactory extends Factory
      */
     protected $model = Contact::class;
 
-    public function definition()
+        public function definition()
     {
         return [
-            'name' => $this->faker->name,
-            'age' => $this->faker->numberBetween(1,100),
-            'nationality' =>$this->faker->country
+            'category_id' => $this->faker->numberBetween(1, 5),
+            'first_name' => $this->faker->lastName(),
+            'last_name' => $this->faker->firstName(),
+            'gender' => $this->faker->randomElement([1, 2, 3]),
+            'email' => $this->faker->safeEmail(),
+            'tel' => $this->faker->phoneNumber(),
+            'address' => $this->faker->city() . $this->faker->streetAddress(),
+            'building' => $this->faker->secondaryAddress(),
+            'detail' => $this->faker->text(120),
         ];
     }
+
 }

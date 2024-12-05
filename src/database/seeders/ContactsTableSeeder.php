@@ -12,11 +12,9 @@ class ContactsTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+        public function run()
     {
-        'name' => $this->faker->name,
-        'age' => $this->faker->numberBetween(1,100),
-        'nationality' =>$this->faker->country
+        Contact::factory()->count(35)->create();
     }
 }
 
