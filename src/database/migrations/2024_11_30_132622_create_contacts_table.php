@@ -11,23 +11,23 @@ class CreateContactsTable extends Migration
      *
      * @return void
      */
-    public function up()
+        public function up()
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->category_id();
-            $table->varchar('first_name');
-            $table->varchar('last_name');
-            $table->tinyint('gender');
-            $table->varchar('email');
-            $table->varchar('tel');
-            $table->varchar('address');
-            $table->varchar('building');
-            $table->text('detail')
-            $table->timestamps('created_at');
-            $table->timestamps('updated_at');
+            $table->string('category_id');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->integer('gender');
+            $table->string('email');
+            $table->string('tel');
+            $table->string('address');
+            $table->string('building');
+            $table->string('detail');
+            $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
