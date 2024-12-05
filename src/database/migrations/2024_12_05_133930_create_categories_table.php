@@ -17,7 +17,6 @@ class CreateCategoriesTable extends Migration
             $table->id();
             $table->string('content');
             $table->timestamps();
-            $table->timestamps(updated_at);
         });
     }
 
