@@ -3,16 +3,18 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\CategorieController;
+//use App\Http\Controllers\CategoryController;
 
 
 Route::get('/', [ContactController::class, 'index']);
-Route::post('/', [ContactController::class, 'index']);
-Route::get('/confirm', [ContactController::class, 'confirm']);
 Route::post('/confirm', [ContactController::class, 'confirm']);
-Route::get('/contacts', [ContactController::class, 'store']);
-Route::post('/contacts', [ContactController::class, 'store']);
+Route::post('/thanks', [ContactController::class, 'store']);
+
+Route::get('/', [AuthController::class, 'index']);
 Route::get('/login', [AuthController::class, 'login']);
 Route::post('/login', [AuthController::class, 'login']);
-Route::get('/register', [AuthController::class, 'register']);
-Route::post('/register', [AuthController::class, 'register']);
+
+
+//Route::get('/admin', [AuthController::class, 'find']);
+//Route::post('/admin', [AuthController::class, 'search']);
+//Route::get('/auth/{auth}', [AuthController::class, 'bind']);

@@ -8,18 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Contact extends Model
 {
     use HasFactory;
-
     protected $fillable = [
-        'name',
-        'email',
-        'tel',
+        'first_name'
+        'last_name'
+        'gender'
+        'email'
+        'tel'
+        'address'
+        'building'
+        'category'
         'content'
-    ];
-
-    public static $rules = array(
-        'name' => 'required',
-        'age' => 'integer|min:0|max:150',
-        'nationality' => 'required'
-    );
+    ]
 }
 

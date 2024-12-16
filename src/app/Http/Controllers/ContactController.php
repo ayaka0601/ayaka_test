@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactRequest;
-use App\Http\Controllers\ContactController;
 use App\Models\Contact;
 
 class ContactController extends Controller
@@ -15,13 +14,13 @@ class ContactController extends Controller
 
   public function confirm(ContactRequest $request)
   {
-    $contact = $request->only(['name', 'sex', 'email', 'tel', 'address', 'choice', 'content']);
+    $contact = $request->only(['first-name', 'last-name', 'gender', 'email', 'tel', 'address', 'category', 'content']);
     return view('confirm', compact('contact'));
   }
 
   public function store(ContactRequest $request)
   {
-    $contact = $request->only(['name', 'sex', 'email', 'tel', 'address', 'choice', 'content']);
+    $contact = $request->only(['first-name', 'last-name', 'gender', 'email', 'tel', 'address', 'category', 'content']);
     Contact::create($contact);
     return view('thanks');
   }
