@@ -10,9 +10,12 @@ Route::get('/', [ContactController::class, 'index']);
 Route::post('/confirm', [ContactController::class, 'confirm']);
 Route::post('/thanks', [ContactController::class, 'store']);
 
-Route::get('/', [AuthController::class, 'index']);
-Route::get('/login', [AuthController::class, 'login']);
+Route::middleware('auth')->group(function () {
+    Route::get('/app', [AuthController::class, 'app']);
+});
 Route::post('/login', [AuthController::class, 'login']);
+Route::post('/register', [AuthController::class, 'register']);
+
 
 
 //Route::get('/admin', [AuthController::class, 'find']);

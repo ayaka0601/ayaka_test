@@ -31,8 +31,8 @@
             <tr class="confirm-table__row">
               <th class="confirm-table__header">お名前</th>
               <td class="confirm-table__text">
-                <input type="text" name="first-name" value="{{ $contact['first-name'] }}" readonly />
-                <input type="text" name="last-name" value="{{ $contact['last-name'] }}" readonly />
+                <input type="text" name="first_name" value="{{ $contact['first_name'] }}" readonly />
+                <input type="text" name="last_name" value="{{ $contact['last_name'] }}" readonly />
               </td>
             </tr>
             <tr class="confirm-table__row">
@@ -51,6 +51,9 @@
               <th class="confirm-table__header">電話番号</th>
               <td class="confirm-table__text">
                 <input type="tel" name="tel" value="{{ $contact['tel1'] }}{{ $contact['tel2'] }}{{ $contact['tel3'] }}" readonly />
+                <input type="hidden" name="tel1" value="{{ $contact['tel1'] }}" readonly />
+                <input type="hidden" name="tel2" value="{{ $contact['tel2'] }}" readonly />
+                <input type="hidden" name="tel3" value="{{ $contact['tel3'] }}" readonly />
               </td>
             </tr>
             <tr class="confirm-table__row">
@@ -68,13 +71,13 @@
             <tr class="confirm-table__row">
               <th class="confirm-table__header">お問い合わせの種類</th>
               <td class="confirm-table__text">
-                <input type="tel" name="contact" value="{{ $contact['category'] }}" readonly />
+                <input type="text" name="category_id" value="{{ $contact['category_id'] }}" readonly />
               </td>
             </tr>
             <tr class="confirm-table__row">
               <th class="confirm-table__header">お問い合わせ内容</th>
               <td class="confirm-table__text">
-                <input type="text" name="content" value="{{ $contact['content'] }}" readonly />
+                <input type="text" name="detail" value="{{ $contact['detail'] }}" readonly />
               </td>
             </tr>
           </table>

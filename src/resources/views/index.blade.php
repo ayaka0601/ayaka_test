@@ -33,12 +33,15 @@
           <div class="form__group-content">
             <div class="form__input--text">
               <label for="first-name">姓:</label>
-              <input type="text" id="first-name" name="first-name" placeholder="例:山田" value="{{ old('name') }}" />
+              <input type="text" id="first_name" name="first_name" placeholder="例:山田" value="{{ old('first_name') }}" />
               <label for="last-name">名:</label>
-              <input type="text" id="last-name" name="last-name" placeholder="例:太郎" value="{{ old('name') }}" />
+              <input type="text" id="last_name" name="last_name" placeholder="例:太郎" value="{{ old('last_name') }}" />
             </div>
             <div class="form__error">
-              @error('name')
+              @error('first_name')
+              {{ $message }}
+              @enderror
+              @error('last_name')
               {{ $message }}
               @enderror
             </div>
@@ -50,9 +53,9 @@
           </div>
           <div class="form__group-content">
             <div class="form__input--text">
-            <input type="radio" name="gender" value="男" checked="checked" />男
-            <input type="radio" name="gender" value="女" /> 女
-            <input type="radio" name="gender" value="その他" /> その他
+            <input type="radio" name="gender" value="1" checked="checked" />男
+            <input type="radio" name="gender" value="2" /> 女
+            <input type="radio" name="gender" value="3" /> その他
             </div>
           </div>
         <div class="form__group">
@@ -125,7 +128,7 @@
           </div>
           <div class="form__group-content">
             <div class="form__input--text">
-              <select name="category">
+              <select name="category_id">
                 <option value="1">商品のお届けについて</option>
                 <option value="2">商品の交換について</option>
                 <option value="3">商品トラブル</option>
@@ -134,7 +137,7 @@
               </select>
             </div>
             <div class="form__error">
-              @error('category')
+              @error('category_id')
               {{ $message }}
               @enderror
             </div>
@@ -145,10 +148,10 @@
             </div>
             <div class="form__group-content">
               <div class="form__input--textarea">
-                <textarea name="content" placeholder="お問い合わせ内容をご記載ください" value="{{ old('content') }}"></textarea>
+                <textarea name="detail" placeholder="お問い合わせ内容をご記載ください" value="{{ old('detail') }}"></textarea>
               </div>
               <div class="form__error">
-              @error('content')
+              @error('detail')
               {{ $message }}
               @enderror
             </div>
